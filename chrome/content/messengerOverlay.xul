@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://usebccinstead/skin/usebccinstead.css" type="text/css"?>
+<?xml-stylesheet href="chrome://messenger/content/bindings.css" type="text/css"?>
+
+<!DOCTYPE messengerOverlay [
+  <!ENTITY % commonDTD SYSTEM "chrome://usebccinstead/locale/common.dtd">
+  %commonDTD;
+  <!ENTITY % messengerOverlayDTD SYSTEM "chrome://usebccinstead/locale/messengerOverlay.dtd">
+  %messengerOverlayDTD;
+]>
+
+<overlay id="UseBccInsteadMessengerOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script type="application/x-javascript" src="namespace.js"/>
+  <script type="application/x-javascript" src="UseBccInsteadUtil.js"/>
+  <script type="application/x-javascript" src="messengerOverlay.js"/>
+
+  <window id="messengerWindow">
+    <label id="UseBccInsteadWhatToDo" hidden="true" value="-1"/>
+  </window>
+
+  <menupopup id="messageMenuPopup">
+    <menu id="UseBccInsteadMainMenuReaddressMenu" class="menu-iconic usebccinsteadmenu" insertafter="forwardAsMenu" label="&TO.label;&#x00BB;&CC.label;&#x00BB;&BCC.label;">
+      <menupopup>
+        <menu id="UseBccInsteadMainMenuWriteMenu" label="&write.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doWrite(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doWrite(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doWrite(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+        <menu id="UseBccInsteadMainMenuReplyMenu" label="&reply.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReply(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReply(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReply(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+        <menu id="UseBccInsteadMainMenuReplyAllMenu" label="&replyAll.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReplyAll(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReplyAll(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReplyAll(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+        <menu id="UseBccInsteadMainMenuForwardMenu" label="&forward.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doForward(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doForward(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doForward(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+      </menupopup>
+    </menu>
+  </menupopup>
+
+  <!-- for TB 2.x -->
+  <menupopup id="messagePaneContext">
+    <menu id="UseBccInsteadMessageContextMenuReaddressMenu" class="menu-iconic usebccinsteadmenu" insertafter="messagePaneContext-forward" label="&TO.label;&#x00BB;&CC.label;&#x00BB;&BCC.label;">
+      <menupopup>
+        <menu id="UseBccInsteadMessageContextMenuWriteMenu" label="&write.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doWrite(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doWrite(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doWrite(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+        <menu id="UseBccInsteadMessageContextMenuReplyMenu" label="&reply.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReply(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReply(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReply(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+        <menu id="UseBccInsteadMessageContextMenuReplyAllMenu" label="&replyAll.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReplyAll(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReplyAll(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReplyAll(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+        <menu id="UseBccInsteadMessageContextMenuForwardMenu" label="&forward.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doForward(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doForward(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doForward(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+      </menupopup>
+    </menu>
+  </menupopup>
+
+  <popup id="threadPaneContext">
+    <menu id="UseBccInsteadThreadContextMenuReaddressMenu" class="menu-iconic usebccinsteadmenu" insertafter="threadPaneContext-forwardAsAttachment" label="&TO.label;&#x00BB;&CC.label;&#x00BB;&BCC.label;">
+      <menupopup>
+        <menu id="UseBccInsteadThreadContextMenuWriteMenu" label="&write.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doWrite(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doWrite(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doWrite(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+        <menu id="UseBccInsteadThreadContextMenuReplyMenu" label="&reply.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReply(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReply(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReply(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+        <menu id="UseBccInsteadThreadContextMenuReplyAllMenu" label="&replyAll.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReplyAll(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReplyAll(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReplyAll(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+        <menu id="UseBccInsteadThreadContextMenuForwardMenu" label="&forward.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doForward(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doForward(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doForward(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+      </menupopup>
+    </menu>
+  </popup>
+
+  <toolbarpalette id="MailToolbarPalette">
+    <toolbarbutton id="UseBccInsteadMainViewToolbarButton" label="&TO.label;&#x00BB;&CC.label;&#x00BB;&BCC.label;" tooltiptext="&TO.label;&#x00BB;&CC.label;&#x00BB;&BCC.label;" type="menu" class="toolbarbutton-1 chromeclass-toolbar-additional">
+      <menupopup>
+        <menu id="UseBccInsteadWriteMenu" label="&write.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doWrite(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doWrite(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doWrite(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+        <menu id="UseBccInsteadReplyMenu" label="&reply.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReply(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReply(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReply(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+        <menu id="UseBccInsteadReplyAllMenu" label="&replyAll.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReplyAll(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReplyAll(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReplyAll(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+        <menu id="UseBccInsteadForwardMenu" label="&forward.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doForward(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doForward(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doForward(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+      </menupopup>
+    </toolbarbutton>
+  </toolbarpalette>
+
+  <!-- for TB 3 and above -->
+  <window id="messageWindow">
+    <label id="UseBccInsteadWhatToDo" hidden="true" value="-1"/>
+  </window>
+
+  <menupopup id="mailContext">
+    <menu id="UseBccInsteadMessageContextMenuReaddressMenu" class="menu-iconic usebccinsteadmenu" insertafter= "mailContext-forward" label="&TO.label;&#x00BB;&CC.label;&#x00BB;&BCC.label;">
+      <menupopup>
+        <menu id="UseBccInsteadMessageContextMenuWriteMenu" label="&write.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doWrite(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doWrite(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doWrite(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+        <menu id="UseBccInsteadMessageContextMenuReplyMenu" label="&reply.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReply(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReply(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReply(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+        <menu id="UseBccInsteadMessageContextMenuReplyAllMenu" label="&replyAll.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReplyAll(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReplyAll(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReplyAll(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+        <menu id="UseBccInsteadMessageContextMenuForwardMenu" label="&forward.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doForward(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doForward(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doForward(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+      </menupopup>
+    </menu>
+  </menupopup>
+
+  <toolbarpalette id="header-view-toolbar-palette">
+    <toolbarbutton id="UseBccInsteadHeaderViewToolbarButton" label="&TO.label;&#x00BB;&CC.label;&#x00BB;&BCC.label;" tooltiptext="&TO.label;&#x00BB;&CC.label;&#x00BB;&BCC.label;" type="menu" class="toolbarbutton-1 chromeclass-toolbar-additional">
+      <menupopup>
+        <menu label="&write.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doWrite(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doWrite(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doWrite(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+        <menu label="&reply.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReply(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReply(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReply(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+        <menu label="&replyAll.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReplyAll(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReplyAll(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doReplyAll(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+        <menu label="&forward.label;">
+          <menupopup>
+            <menuitem label="&using.label; &TO.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doForward(UseBccInstead.UseBccInsteadUtil.TO)"/>
+            <menuitem label="&using.label; &CC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doForward(UseBccInstead.UseBccInsteadUtil.CC)"/>
+            <menuitem label="&using.label; &BCC.label;" oncommand="UseBccInstead.UseBccInsteadMessengerOverlay.doForward(UseBccInstead.UseBccInsteadUtil.BCC)"/>
+          </menupopup>
+        </menu>
+      </menupopup>
+    </toolbarbutton>
+  </toolbarpalette>
+</overlay>

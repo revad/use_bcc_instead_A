@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>{cc138c46-ac77-4397-afc0-6cb6a13b7242}</em:id>
+    <em:version>3.4.2</em:version>
+    <em:type>2</em:type>
+
+    <!-- Thunderbird -->
+    <em:targetApplication>
+      <Description>
+        <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
+        <em:minVersion>60.0.0</em:minVersion>
+        <em:maxVersion>60.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+    <!-- Front End MetaData -->
+    <em:name>Use Bcc Instead</em:name>
+    <em:creator>David White</em:creator>
+    <em:contributor>Eyal Rozenberg - for suggesting check for Reply All to a message received BCC - Thanks!</em:contributor>
+    <em:contributor>Jesus Centella - for suggesting enhancement of Start Email With function - Thanks!</em:contributor>
+    <em:contributor>Juan Abba - for suggesting several enhancements including the minimum recipient count be 0 instead of 2 - Thanks!</em:contributor>
+    <em:contributor>lucette - for suggesting the always send using BCC option - Thanks!</em:contributor>
+    <em:contributor>Daniele Binaghi - for suggesting the Change All Recipients To function - Thanks!</em:contributor>
+    <em:contributor>manuamano - for suggesting the new/forward message address mode function - Thanks!</em:contributor>
+    <em:contributor>Jim Kiefer Jr. - for suggesting the extended recipients column - Thanks!</em:contributor>
+    <em:contributor>Moritz Abraham - author of the Show Address addon who's code helped in development of the extended recipients column. Thanks!</em:contributor>
+    <em:contributor>Eberhard Kuemmerle - for pointing out that ; can now be used along with , to delimit multiple email addresses on a single line. Thanks!</em:contributor>
+    <em:contributor>Jenni Woodcock - for pointing the way to making mail list testing work on Mac. Thanks!</em:contributor>
+    <em:homepageURL></em:homepageURL>
+    <em:iconURL>chrome://usebccinstead/skin/images/bcc.png</em:iconURL>
+    <em:optionsURL>chrome://usebccinstead/content/AddonOptions.xul</em:optionsURL>
+    <!-- localized - see prefs.properties file under each locale -->
+    <em:description></em:description>
+    <em:translator>Mark Heijl (nl)</em:translator>
+    <em:translator>Mikael Hiort af Ornas (sv-SE)</em:translator>
+    <em:translator>yfdyh000@gmail.com (zh-CN)</em:translator>
+    <em:translator>Mauro Jose da Silva (pt-BR)</em:translator>
+    <em:translator>Stanislav Horacek (cs)</em:translator>
+    <em:translator>DakSrbija (sr)</em:translator>
+    <em:translator>Underpass/extenzilla.org (it)</em:translator>
+    <em:translator>Andreas Baum (de)</em:translator>
+    <em:translator>manuamano (fr)</em:translator>
+    <em:translator>HenryGR (es-ES)</em:translator>
+  </Description>
+</RDF>

@@ -13,7 +13,7 @@ locale usebccinstead de chrome/locale/de/
 locale usebccinstead fr chrome/locale/fr/
 locale usebccinstead es-ES chrome/locale/es-ES/
 #overlay chrome://messenger/content/mailWindowOverlay.xul chrome://usebccinstead/content/messengerOverlay.xul
-overlay chrome://meddenger/content/customizeToolbar.xul chrome://usebccinstead/content/CustomizeToolbarWindowOverlay.xul
+overlay chrome://messenger/content/customizeToolbar.xul chrome://usebccinstead/content/CustomizeToolbarWindowOverlay.xul
 overlay chrome://messenger/content/messengercompose/messengercompose.xul chrome://usebccinstead/content/messageSendOverlay.xul
 overlay chrome://messenger/content/messengercompose/messengercompose.xul chrome://usebccinstead/content/composeWindowOverlay.xul
 overlay chrome://messenger/content/messenger.xul chrome://usebccinstead/content/extendedRecipientsColumnOverlay3.xul appversion>=29.0 platformversion>=24

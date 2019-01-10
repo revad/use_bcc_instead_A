@@ -13,5 +13,4 @@
 <!ENTITY composingEmail.label "When Composing Email">
 <!ENTITY play.label "Play warning sound">
 <!ENTITY addUndisclosedRecipients.label "Use undisclosed recipients">
-<!ENTITY addUndisclosedRecipients.tooltip "Click here for more details about this Thunderbird preference">
 <!ENTITY otherOptions.label "Other">

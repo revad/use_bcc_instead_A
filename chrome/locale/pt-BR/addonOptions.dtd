@@ -13,5 +13,4 @@
 <!ENTITY composingEmail.label "Ao escrever mensagem">
 <!ENTITY play.label "Tocar o som de aviso">
 <!ENTITY addUndisclosedRecipients.label "Use destinatários não revelados">
-<!ENTITY addUndisclosedRecipients.tooltip "Clique aqui para mais detalhes sobre esta preferência Thunderbird">
 <!ENTITY otherOptions.label "Outro">

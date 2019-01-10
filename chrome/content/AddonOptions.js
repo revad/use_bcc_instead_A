@@ -2,16 +2,6 @@ UseBccInstead.UseBccInsteadPrefs =
 {
   inEditCount: false,
 
-  showMozillazine: function()
-  {
-    var uri = Components.classes["@mozilla.org/network/standard-url;1"].createInstance(Components.interfaces.nsIURI);
-    uri.spec = "http://kb.mozillazine.org/BCC";
-    var protocolSvc = Components.classes["@mozilla.org/uriloader/external-protocol-service;1"].getService(Components.interfaces.nsIExternalProtocolService);
-    protocolSvc.loadUrl(uri);
-    protocolSvc = null;
-    uri = null;
-  },
-
   onLoad: function()
   {
     // remove to avoid duplicate initialization

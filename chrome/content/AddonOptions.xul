@@ -81,7 +81,7 @@
       <groupbox id="otherOptions">
         <caption label="&otherOptions.label;"/>
         <hbox align="center">
-          <label control="addUndisclosedRecipients" value="&addUndisclosedRecipients.label;" onclick="UseBccInstead.UseBccInsteadPrefs.showMozillazine()" style="color: #0000FF; text-decoration: underline; cursor: pointer;" tooltiptext="&addUndisclosedRecipients.tooltip;"/>
+          <label control="addUndisclosedRecipients" value="&addUndisclosedRecipients.label;"/>
           <checkbox id="addUndisclosedRecipients" preference="enableAddUndisclosedRecipients"/>
         </hbox>
       </groupbox>

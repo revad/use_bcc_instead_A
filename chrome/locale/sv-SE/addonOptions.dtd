@@ -13,5 +13,4 @@
 <!ENTITY composingEmail.label "När ett meddelande skrivs">
 <!ENTITY play.label "Spela upp ett varningsljud">
 <!ENTITY addUndisclosedRecipients.label "Använd hemliga/dolda mottagare">
-<!ENTITY addUndisclosedRecipients.tooltip "Klicka här för att få veta mer om denna Thunderbird-inställning">
 <!ENTITY otherOptions.label "Övrigt">

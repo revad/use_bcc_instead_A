@@ -13,5 +13,4 @@
 <!ENTITY composingEmail.label "Lors de la composition d'un message">
 <!ENTITY play.label "signal sonore">
 <!ENTITY addUndisclosedRecipients.label "Masquez les destinataires">
-<!ENTITY addUndisclosedRecipients.tooltip "Cliquez ici pour plus de détails sur cette option de Thunderbird">
 <!ENTITY otherOptions.label "Autres">

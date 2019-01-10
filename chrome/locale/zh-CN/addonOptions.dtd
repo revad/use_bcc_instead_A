@@ -13,5 +13,4 @@
 <!ENTITY composingEmail.label "当撰写电子邮件时">
 <!ENTITY play.label "播放警告音">
 <!ENTITY addUndisclosedRecipients.label "使用不会公开的接收者">
-<!ENTITY addUndisclosedRecipients.tooltip "点此了解有关此 Thunderbird 首选项的更多信息">
 <!ENTITY otherOptions.label "其他">

@@ -13,5 +13,4 @@
 <!ENTITY composingEmail.label "Při vytváření e-mailu">
 <!ENTITY play.label "Přehrát varovný zvuk">
 <!ENTITY addUndisclosedRecipients.label "Použít utajené adresáty">
-<!ENTITY addUndisclosedRecipients.tooltip "Klepněte sem pro podrobnosti o této předvolbě Thunderbirdu">
 <!ENTITY otherOptions.label "Další">

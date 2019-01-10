@@ -3,7 +3,8 @@
 <!ENTITY showHelp.label "Add-ondocumentatie weergeven">
 <!ENTITY count.label "Maximaal aantal toegestane ontvangers AAN en CC:">
 <!ENTITY forceBcc.label "AAN en CC-ontvangers altijd vervangen door BCC">
-<!ENTITY force.label "Verzenden van e-mailbericht niet toelaten als bovenstaande waarde wordt overschreden">
+<!ENTITY actionsIfCountExceeded.label "Als bovenstaande waarde wordt overschreden:">
+<!ENTITY force.label "Verzenden van e-mailbericht niet toelaten">
 <!ENTITY enableChangeAllRecipients.label "Alle ontvangers wijzigen inschakelen">
 <!ENTITY help.label "Help">
 <!ENTITY website.label "Klik hier om naar de website van de add-on te gaan">

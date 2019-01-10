@@ -3,7 +3,8 @@
 <!ENTITY showHelp.label "Mostrar documentação do complemento">
 <!ENTITY count.label "Quantidade máxima de destinatários no &quot;Para&quot; e &quot;Cc&quot;:">
 <!ENTITY forceBcc.label "Sempre mover para o &quot;Cco&quot; os destinatários do &quot;Para&quot; e &quot;Cc&quot;">
-<!ENTITY force.label "Não permitir enviar se a quantidade acima for excedida">
+<!ENTITY actionsIfCountExceeded.label "Se a quantidade acima for excedida:">
+<!ENTITY force.label "Não permitir que a mensagem seja enviada">
 <!ENTITY enableChangeAllRecipients.label "Habilitar alterar todos os destinatários">
 <!ENTITY help.label "Ajuda">
 <!ENTITY website.label "Clique aqui para visitar o site deste complemento">

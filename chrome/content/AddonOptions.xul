@@ -37,12 +37,12 @@
       <groupbox id="sendingOptions">
         <caption label="&sendingEmail.label;" class="header"/>
         <checkbox id="forceBccCheckbox" preference="forceBcc" oncommand="UseBccInstead.UseBccInsteadPrefs.toggle(false)" label="&forceBcc.label;"/>
+        <hbox align="center">
+          <label id="maxCountLabel" control="maxCount" value="&count.label;"/>
+          <textbox id="maxCount" size="2" maxlength="2" onchange="UseBccInstead.UseBccInsteadPrefs.validateCount()" label="&count.label;"/>
+        </hbox>
         <groupbox>
-          <caption/>
-          <hbox align="center">
-            <label id="maxCountLabel" control="maxCount" value="&count.label;"/>
-            <textbox id="maxCount" size="2" maxlength="2" onchange="UseBccInstead.UseBccInsteadPrefs.validateCount()" label="&count.label;"/>
-          </hbox>
+          <caption label="&actionsIfCountExceeded.label;"/>
           <checkbox id="force" preference="force" label="&force.label;"/>
           <checkbox id="play" preference="play" label="&play.label;"/>
         </groupbox>

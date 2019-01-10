@@ -3,7 +3,8 @@
 <!ENTITY showHelp.label "Zeige Erweiterungsdokumentation">
 <!ENTITY count.label "Maximal zulässige Anzahl von An- und CC-Empfängern:">
 <!ENTITY forceBcc.label "Immer alle An- und CC-Empfänger auf BCC umstellen">
-<!ENTITY force.label "Senden von Nachrichten verhindern, wenn obiger Wert überschritten wird">
+<!ENTITY actionsIfCountExceeded.label "Wenn obiger Wert überschritten wird:">
+<!ENTITY force.label "Senden der Nachricht verhindern">
 <!ENTITY enableChangeAllRecipients.label "Aktiviere Funktion, um alle Empfänger auf An, CC oder BCC umzustellen">
 <!ENTITY help.label "Hilfe">
 <!ENTITY website.label "Hier klicken, um die Erweiterungswebseite anzuzeigen">

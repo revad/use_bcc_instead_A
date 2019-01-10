@@ -3,7 +3,8 @@
 <!ENTITY showHelp.label "Документација за додатак">
 <!ENTITY count.label "Највиши дозвољени број прималаца у пољима TO and CC:">
 <!ENTITY forceBcc.label "Увек замени BCC за TO и CC примаоце">
-<!ENTITY force.label "Не шаљи поруку ако је гореневедена вредност премашена">
+<!ENTITY actionsIfCountExceeded.label "Ако је горе наведена вредност прекорачена:">
+<!ENTITY force.label "Не шаљи поруку">
 <!ENTITY enableChangeAllRecipients.label "Омогући мењање свих прималаца">
 <!ENTITY help.label "Помоћ">
 <!ENTITY website.label "Матична страница додатка">

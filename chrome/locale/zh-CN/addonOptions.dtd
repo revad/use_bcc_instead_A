@@ -2,8 +2,8 @@
 <!ENTITY prefpane.label "附加组件设置">
 <!ENTITY showHelp.label "显示附加组件说明文档">
 <!ENTITY count.label "最多允许收件人和抄送接收者的数量：">
-<!ENTITY forceBcc.label "始终对收件人和抄送接收者用密送代替：">
-<!ENTITY force.label "如果超出上面的值则不允许发送电子邮件：">
+<!ENTITY forceBcc.label "始终对收件人和抄送接收者用密送代替">
+<!ENTITY force.label "如果超出上面的值则不允许发送电子邮件">
 <!ENTITY enableChangeAllRecipients.label "启用更改所有接收者">
 <!ENTITY help.label "帮助">
 <!ENTITY website.label "点击此处查看本附加组件的网站">

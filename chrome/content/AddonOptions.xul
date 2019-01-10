@@ -35,31 +35,21 @@
 
     <vbox>
       <groupbox id="sendingOptions">
-        <caption label="&sendingEmail.label;"/>
-        <hbox align="center">
-          <label control="forceBccCheckbox" value="&forceBcc.label;"/>
-          <checkbox id="forceBccCheckbox" preference="forceBcc" oncommand="UseBccInstead.UseBccInsteadPrefs.toggle(false)"/>
-        </hbox>
+        <caption label="&sendingEmail.label;" class="header"/>
+        <checkbox id="forceBccCheckbox" preference="forceBcc" oncommand="UseBccInstead.UseBccInsteadPrefs.toggle(false)" label="&forceBcc.label;"/>
         <groupbox>
+          <caption/>
           <hbox align="center">
             <label id="maxCountLabel" control="maxCount" value="&count.label;"/>
-            <textbox id="maxCount" size="2" maxlength="2" onchange="UseBccInstead.UseBccInsteadPrefs.validateCount()"/>
+            <textbox id="maxCount" size="2" maxlength="2" onchange="UseBccInstead.UseBccInsteadPrefs.validateCount()" label="&count.label;"/>
           </hbox>
-
-          <hbox align="center">
-            <label control="force" value="&force.label;"/>
-            <checkbox id="force" preference="force"/>
-          </hbox>
-
-          <hbox align="center">
-            <label control="play" value="&play.label;"/>
-            <checkbox id="play" preference="play"/>
-          </hbox>
+          <checkbox id="force" preference="force" label="&force.label;"/>
+          <checkbox id="play" preference="play" label="&play.label;"/>
         </groupbox>
       </groupbox>
 
       <groupbox id="composeOptions">
-        <caption label="&composingEmail.label;"/>
+        <caption label="&composingEmail.label;" class="header"/>
         <hbox align="center">
           <label control="defaultNewMsgMode" value="&defaultNewMsgMode.label;"/>
           <menulist editable="false" id="defaultNewMsgMode" oncommand="UseBccInstead.UseBccInsteadPrefs.updateNewMsgMode()">
@@ -72,25 +62,17 @@
           </menulist>
         </hbox>
 
-        <hbox align="center">
-          <label control="enableChangeAllRecipients" value="&enableChangeAllRecipients.label;"/>
-          <checkbox id="enableChangeAllRecipients" preference="enableChangeAll" label="*"/>
-        </hbox>
+        <checkbox id="enableChangeAllRecipients" preference="enableChangeAll" label="&enableChangeAllRecipients.label; *"/>
+        <label value="&restart.label;" style="font-style: italic"/>
       </groupbox>
 
       <groupbox id="otherOptions">
-        <caption label="&otherOptions.label;"/>
-        <hbox align="center">
-          <label control="addUndisclosedRecipients" value="&addUndisclosedRecipients.label;"/>
-          <checkbox id="addUndisclosedRecipients" preference="enableAddUndisclosedRecipients"/>
-        </hbox>
+        <caption label="&otherOptions.label;" class="header"/>
+        <checkbox id="addUndisclosedRecipients" preference="enableAddUndisclosedRecipients" label="&addUndisclosedRecipients.label;"/>
       </groupbox>
 
-      <vbox align="center">
-        <label value="&restart.label;"/>
   <!-- this addon has no website at this time. maybe later...
-        <label value="&website.label;" onclick="UseBccInstead.UseBccInsteadPrefs.showWebsite()" style="color: #0000FF; text-decoration: underline; cursor: pointer;"/ -->
-      </vbox>
+      <label value="&website.label;" onclick="UseBccInstead.UseBccInsteadPrefs.showWebsite()" style="color: #0000FF; text-decoration: underline; cursor: pointer;"/ -->
     </vbox>
   </prefpane>
 </prefwindow>

@@ -3,7 +3,7 @@
 <!ENTITY showHelp.label "Afficher la documentation de l'extension">
 <!ENTITY count.label "Maximum autorisé de destinataires en mode &quot;Pour:&quot; et &quot;Copie à:&quot;">
 <!ENTITY forceBcc.label "Toujours remplacer &quot;Pour:&quot; et &quot;Copie à:&quot; par &quot;Copie Cachée à:&quot;">
-<!ENTITY force.label "Bloquer l'envoi du message si le nombre ci-dessus est dépassé:">
+<!ENTITY force.label "Bloquer l'envoi du message si le nombre ci-dessus est dépassé">
 <!ENTITY enableChangeAllRecipients.label "Permettre la modification pour tous les destinataires.">
 <!ENTITY help.label "Aide">
 <!ENTITY website.label "Cliquez ici pour naviguer sur le site de l'extension.">

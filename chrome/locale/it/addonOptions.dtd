@@ -2,8 +2,8 @@
 <!ENTITY prefpane.label "Impostazioni dell'estensione">
 <!ENTITY showHelp.label "Mostra la documentazione dell'estensione">
 <!ENTITY count.label "Numero massimo consentito di destinatari A: e CC:">
-<!ENTITY forceBcc.label "Modifica in CCN i destinatari A: e CC:">
-<!ENTITY force.label "Annulla l'invio se il valore indicato in precedenza viene superato:">
+<!ENTITY forceBcc.label "Modifica in CCN i destinatari A: e CC">
+<!ENTITY force.label "Annulla l'invio se il valore indicato in precedenza viene superato">
 <!ENTITY enableChangeAllRecipients.label "Attiva modifica di tutti i destinatari">
 <!ENTITY help.label "Guida">
 <!ENTITY website.label "Sito web dell'estensione">

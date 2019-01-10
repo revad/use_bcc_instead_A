@@ -2,8 +2,8 @@
 <!ENTITY prefpane.label "Add-on Settings">
 <!ENTITY showHelp.label "Show Addon Documentation">
 <!ENTITY count.label "Maximum Permitted TO and CC Recipients:">
-<!ENTITY forceBcc.label "Always substitute BCC for TO and CC Recipients:">
-<!ENTITY force.label "Do not permit sending of email if the value above is exceeded:">
+<!ENTITY forceBcc.label "Always substitute BCC for TO and CC Recipients">
+<!ENTITY force.label "Do not permit sending of email if the value above is exceeded">
 <!ENTITY enableChangeAllRecipients.label "Enable Change All Recipients">
 <!ENTITY help.label "Help">
 <!ENTITY website.label "Click here to see this add-on&apos;s website">
